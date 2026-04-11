@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "status": "ok",
+  "generatedAt": "2026-04-11T10:00:00Z",
+  "platforms": {
+    "ios": {
+      "latestVersion": "1.2.0",
+      "minimumSupportedVersion": "1.1.0",
+      "storeUrl": "https://apps.apple.com/app/idXXXXXXXXXX",
+      "messages": {
+        "optionalTitle": "New version available",
+        "optionalBody": "A newer version of WTFunds is available with improvements and fixes.",
+        "requiredTitle": "Update required",
+        "requiredBody": "Your version of WTFunds is no longer supported. Please update to continue."
+      }
+    },
+    "android": {
+      "latestVersion": "1.2.0",
+      "minimumSupportedVersion": "1.0.5",
+      "storeUrl": "https://play.google.com/store/apps/details?id=com.seuapp.wtfunds",
+      "messages": {
+        "optionalTitle": "New version available",
+        "optionalBody": "A newer version of WTFunds is available with improvements and fixes.",
+        "requiredTitle": "Update required",
+        "requiredBody": "Your version of WTFunds is no longer supported. Please update to continue."
+      }
+    }
+  }
+}
