@@ -1,407 +1,255 @@
-<!doctype html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Where The Funds — Privacy Policy / Política de Privacidade</title>
-  <meta name="description" content="Privacy Policy / Política de Privacidade for Where The Funds." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Where The Funds legal and support information." />
+  <title>WTFunds — Privacy Policy</title>
   <style>
-    :root{
-      color-scheme: light dark;
-
-      /* Where The Funds brand palette (from logo) */
-      --purple-dark:#1A0648;
-      --green-neon:#CDF73F;
-      --green-bright:#6DE32F;
-      --green-mid:#24A42F;
-      --green-dark:#105031;
-
-      --text:#ffffff;
-      --muted:rgba(255,255,255,.82);
-      --border:rgba(255,255,255,.18);
-      --card:rgba(255,255,255,.06);
-      --shadow:0 10px 30px rgba(0,0,0,.25);
-      --radius:16px;
-    }
-
-    body{
-      margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      line-height:1.6;
-      color:var(--text);
-      background:linear-gradient(180deg,#0f0729 0%, var(--purple-dark) 100%);
-    }
-
-    header, main, footer{
-      max-width:920px;
-      margin:0 auto;
-      padding:20px;
-    }
-
-    header{
-      border-bottom:1px solid var(--border);
-    }
-
-    .topbar{
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap:16px;
-      flex-wrap:wrap;
-    }
-
-    h1{
-      margin:0;
-      font-size:1.55rem;
-      color:var(--green-neon);
-      letter-spacing:.2px;
-    }
-
-    .meta{
-      margin:6px 0 0;
-      color:var(--muted);
-      font-size:.98rem;
-    }
-
-    nav{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      align-items:center;
-      margin-top:14px;
-    }
-
-    a.navlink{
-      text-decoration:none;
-      color:var(--text);
-      border:1px solid var(--green-dark);
-      padding:8px 12px;
-      border-radius:12px;
-      font-weight:650;
-      background:rgba(0,0,0,.10);
-    }
-    a.navlink:hover{ border-color:var(--green-neon); }
-
-    .tabs{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:14px;
-    }
-    .tabs button{
-      border:1px solid var(--green-dark);
-      background:transparent;
-      color:var(--text);
-      padding:8px 12px;
-      border-radius:12px;
-      cursor:pointer;
-      font-weight:700;
-    }
-    .tabs button[aria-pressed="true"]{
-      background:var(--green-mid);
-      color:#000;
-      border-color:var(--green-neon);
-    }
-
-    .card{
-      margin-top:20px;
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      padding:20px;
-      box-shadow:var(--shadow);
-    }
-
-    h2{ margin:0 0 10px; font-size:1.2rem; color:var(--green-bright); }
-    h3{ margin:18px 0 8px; font-size:1.05rem; color:var(--green-neon); }
-
-    p{ margin:10px 0; }
-    ul{ margin:8px 0 0 18px; }
-    li{ margin:6px 0; }
-
-    .muted{ color:var(--muted); }
-    .pill{
-      display:inline-block;
-      border:1px solid var(--border);
-      border-radius:999px;
-      padding:2px 10px;
-      font-size:.92rem;
-      color:var(--muted);
-    }
-
-    .lang{ display:none; }
-    .lang.active{ display:block; }
-
-    footer{
-      border-top:1px solid var(--border);
-      color:var(--muted);
-      font-size:.95rem;
-    }
-
-    .contact{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      align-items:center;
-    }
-    .email{
-      color:var(--green-neon);
-      font-weight:750;
-      text-decoration:none;
-      border-bottom:1px dashed rgba(205,247,63,.55);
-    }
-    .email:hover{ border-bottom-color:var(--green-neon); }
-
-    a.inline-link{
-      color:var(--green-neon);
-      font-weight:650;
-      text-decoration:none;
-      border-bottom:1px dashed rgba(205,247,63,.55);
-    }
-    a.inline-link:hover{ border-bottom-color:var(--green-neon); }
-  </style>
+:root {
+  --bg: #0f1020;
+  --card: #17182c;
+  --text: #f4f4f7;
+  --muted: #b8b8c7;
+  --accent: #8b5cf6;
+  --accent-2: #22c55e;
+  --border: rgba(255,255,255,0.12);
+  --link: #c4b5fd;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: radial-gradient(circle at top left, rgba(139,92,246,0.22), transparent 32%), var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+}
+.wrapper {
+  width: min(980px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0 56px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  padding: 18px 0 24px;
+}
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.brand strong { font-size: 1.15rem; letter-spacing: 0.2px; }
+.brand span { color: var(--muted); font-size: 0.92rem; }
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+nav a, .lang a {
+  color: var(--text);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.04);
+}
+nav a.active {
+  border-color: var(--accent);
+  background: rgba(139,92,246,0.2);
+}
+.hero {
+  border: 1px solid var(--border);
+  background: rgba(23,24,44,0.82);
+  border-radius: 24px;
+  padding: 32px;
+  margin-bottom: 22px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+.hero h1 {
+  margin: 0 0 8px;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.1;
+}
+.hero p { margin: 0; color: var(--muted); max-width: 760px; }
+.card {
+  border: 1px solid var(--border);
+  background: rgba(23,24,44,0.74);
+  border-radius: 20px;
+  padding: 26px;
+  margin: 18px 0;
+}
+h2 { margin-top: 0; font-size: 1.55rem; }
+h3 { margin-top: 26px; color: #ffffff; }
+p, li { color: var(--muted); }
+strong { color: #ffffff; }
+a { color: var(--link); }
+ul { padding-left: 22px; }
+.notice {
+  border-left: 4px solid var(--accent-2);
+  padding: 12px 16px;
+  background: rgba(34,197,94,0.08);
+  border-radius: 12px;
+  margin: 18px 0;
+}
+.lang {
+  display: flex;
+  gap: 10px;
+  margin: 16px 0 0;
+}
+.footer {
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  margin-top: 32px;
+  padding-top: 20px;
+  font-size: 0.92rem;
+}
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 34px 0;
+}
+@media (max-width: 720px) {
+  .header { flex-direction: column; align-items: flex-start; }
+  .hero, .card { padding: 22px; }
+}
+</style>
 </head>
-
 <body>
-<header>
-  <div class="topbar">
-    <div>
-      <h1>Privacy Policy / Política de Privacidade</h1>
-      <p class="meta">
-        App: <strong>Where The Funds</strong><br />
-        <span class="pill">Last updated / Última atualização: February 10, 2026</span>
-      </p>
-    </div>
-
-    <nav aria-label="Site navigation">
-      <a class="navlink" href="index.html">Privacy</a>
-      <a class="navlink" href="terms.html">Terms</a>
-      <a class="navlink" href="support.html">Support</a>
+  <main class="wrapper">
+    <header class="header">
+      <div class="brand">
+        <strong>WTFunds — Where The Funds</strong>
+        <span>Because yesterday it made sense.</span>
+      </div>
+      
+    <nav aria-label="Main navigation">
+      <a class="active" href="index.html#both">Privacy</a>
+      <a class="" href="terms.html#both">Terms</a>
+      <a class="" href="support.html#both">Support</a>
     </nav>
-  </div>
+    
+    </header>
 
-  <div class="tabs" role="tablist" aria-label="Language switch">
-    <button id="btn-both" type="button" aria-pressed="true">PT + EN</button>
-    <button id="btn-pt" type="button" aria-pressed="false">Português</button>
-    <button id="btn-en" type="button" aria-pressed="false">English</button>
-  </div>
-</header>
-
-<main>
-  <!-- BOTH -->
-  <div id="view-both" class="lang active">
-    <div class="card">
-      <h2>Política de Privacidade (Português)</h2>
-      <p><strong>Resumo:</strong> o Where The Funds funciona localmente. Seus dados de despesas ficam no seu dispositivo. O app também pode usar análises opcionais para melhorar a experiência.</p>
-
-      <h3>1. Informações coletadas</h3>
-      <p><strong>Dados de despesas (local):</strong> as informações que você registra no app (ex.: valor, data, categoria, moeda e observações) são armazenadas <strong>somente no seu dispositivo</strong>.</p>
-      <p><strong>Não coletamos</strong> dados financeiros em servidores e <strong>não temos acesso</strong> ao seu histórico de despesas.</p>
-
-      <h3>2. Analytics (Firebase Analytics)</h3>
-      <p>Para melhorar o app, utilizamos o <strong>Google Firebase Analytics</strong> quando a opção de análises estiver ativada.</p>
-      <p>O Firebase Analytics pode coletar automaticamente informações técnicas, como:</p>
-      <ul>
-        <li>Tipo de dispositivo e sistema operacional</li>
-        <li>Versão do app</li>
-        <li>Idioma e fuso horário</li>
-        <li>Interações de uso dentro do app</li>
-        <li><strong>Localização aproximada derivada do IP</strong> (ex.: país/região)</li>
-      </ul>
-      <p><strong>Importante:</strong> o app <strong>não coleta</strong> localização precisa por GPS.</p>
-
-      <h3>3. Controle de Analytics</h3>
-      <p>Você pode desativar o envio de eventos de analytics a qualquer momento em:</p>
-      <p><strong>Settings / Configurações → Disable Analytics Sharing</strong> (ou opção equivalente no app).</p>
-      <p>Quando desativado, o app para de enviar eventos ao Firebase Analytics.</p>
-
-      <h3>4. Armazenamento e processamento</h3>
-      <ul>
-        <li>Dados de despesas: <strong>somente no dispositivo</strong></li>
-        <li>Processamento de despesas: <strong>local</strong></li>
-        <li>Analytics (se ativado): processado pelos serviços do Google Firebase</li>
-      </ul>
-
-      <h3>5. Login e contas</h3>
-      <p>O aplicativo <strong>não possui login</strong> e <strong>não cria contas de usuário</strong>.</p>
-
-      <h3>6. Compartilhamento de dados</h3>
-      <p>Não vendemos, alugamos ou comercializamos dados do usuário.</p>
-      <p>Se o analytics estiver ativado, os dados de uso são processados pelo Google conforme a política de privacidade do Google:
-        <a class="inline-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>
-      </p>
-
-      <h3>7. Permissões</h3>
-      <p>O aplicativo não solicita permissões sensíveis (contatos, localização por GPS, câmera, microfone).</p>
-
-      <h3>8. Crianças</h3>
-      <p>O aplicativo não é direcionado especificamente a crianças e <strong>não coleta intencionalmente</strong> dados de menores de 13 anos.</p>
-
-      <h3>9. Alterações nesta política</h3>
-      <p>Podemos atualizar esta Política de Privacidade. Se houver mudanças relevantes, a versão atualizada será publicada nesta página.</p>
-
-      <h3>10. Contato</h3>
-      <div class="contact">
-        <span>Dúvidas?</span>
-        <a class="email" href="mailto:wtfunds.app@gmail.com">wtfunds.app@gmail.com</a>
+    <section class="hero">
+      <h1>Privacy Policy / Política de Privacidade</h1>
+      <p>How WTFunds handles local data, analytics, subscriptions, CSV export, and support-related information.</p>
+      <div class="lang">
+        <a href="#en">English</a>
+        <a href="#pt">Português</a>
+        <a href="#both">Both</a>
       </div>
-    </div>
+    </section>
 
-    <div class="card">
-      <h2>Privacy Policy (English)</h2>
-      <p><strong>Summary:</strong> Where The Funds works locally. Your expense data stays on your device. The app may also use optional analytics to improve the experience.</p>
+    
+<section id="both"></section>
 
-      <h3>1. Information we collect</h3>
-      <p><strong>Expense data (local):</strong> the information you enter in the app (e.g., amount, date, category, currency, notes) is stored <strong>on your device only</strong>.</p>
-      <p>We do <strong>not</strong> store your financial data on our servers, and we do <strong>not</strong> have access to your expense history.</p>
+<section id="en" class="card">
+  <h2>Privacy Policy</h2>
+  <p><strong>Last updated:</strong> June 14, 2026</p>
 
-      <h3>2. Analytics (Firebase Analytics)</h3>
-      <p>To improve the app experience, we use <strong>Google Firebase Analytics</strong> when analytics is enabled.</p>
-      <p>Firebase Analytics may automatically collect technical information such as:</p>
-      <ul>
-        <li>Device type and operating system</li>
-        <li>App version</li>
-        <li>Language and time zone</li>
-        <li>Usage interactions within the app</li>
-        <li><strong>Approximate location derived from IP address</strong> (e.g., country/region)</li>
-      </ul>
-      <p><strong>Important:</strong> the app does <strong>not</strong> collect precise GPS location.</p>
-
-      <h3>3. Analytics Control</h3>
-      <p>You can disable analytics collection at any time in:</p>
-      <p><strong>Settings → Disable Analytics Sharing</strong> (or the equivalent option inside the app).</p>
-      <p>When disabled, the app stops sending analytics events to Firebase Analytics.</p>
-
-      <h3>4. Data storage and processing</h3>
-      <ul>
-        <li>Expense data: <strong>on-device only</strong></li>
-        <li>Expense processing: <strong>local</strong></li>
-        <li>Analytics (if enabled): processed by Google Firebase services</li>
-      </ul>
-
-      <h3>5. Accounts and login</h3>
-      <p>The app <strong>does not have a login system</strong> and <strong>does not create user accounts</strong>.</p>
-
-      <h3>6. Data sharing</h3>
-      <p>We do not sell, rent, or trade user data.</p>
-      <p>If analytics is enabled, usage analytics data is processed by Google under Google’s privacy policy:
-        <a class="inline-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>
-      </p>
-
-      <h3>7. Permissions</h3>
-      <p>The app does not request sensitive permissions (contacts, GPS location, camera, microphone).</p>
-
-      <h3>8. Children</h3>
-      <p>The app is not specifically directed to children and does <strong>not knowingly</strong> collect data from children under 13.</p>
-
-      <h3>9. Changes to this policy</h3>
-      <p>This policy may be updated. If there are relevant changes, the updated version will be posted on this page.</p>
-
-      <h3>10. Contact</h3>
-      <div class="contact">
-        <span>Questions?</span>
-        <a class="email" href="mailto:wtfunds.app@gmail.com">wtfunds.app@gmail.com</a>
-      </div>
-    </div>
+  <div class="notice">
+    <strong>Summary:</strong> WTFunds is designed to work locally. Expenses, income records, notes, categories, recurring transactions, and CSV exports stay on your device unless you choose to share or export them.
   </div>
 
-  <!-- PT -->
-  <div id="view-pt" class="lang">
-    <div class="card">
-      <h2>Política de Privacidade</h2>
-      <p class="muted"><strong>Última atualização:</strong> 10 de fevereiro de 2026</p>
-      <p>O Where The Funds funciona localmente. Seus dados de despesas ficam no seu dispositivo. O app pode usar análises opcionais para melhorar a experiência.</p>
+  <h3>1. Information you enter in the app</h3>
+  <p>WTFunds lets you record personal finance information, including expenses, income, categories, dates, currencies, notes, custom categories, and recurring expense or income rules.</p>
+  <p>This information is stored locally on your device. We do not operate a server that receives or stores your financial records, transaction history, notes, categories, CSV files, or recurring transaction details.</p>
 
-      <h3>1. Informações coletadas</h3>
-      <p><strong>Dados de despesas (local):</strong> armazenados somente no dispositivo.</p>
-      <p><strong>Analytics (opcional):</strong> se ativado, usamos Google Firebase Analytics para coletar eventos de uso e informações técnicas (incluindo localização aproximada derivada do IP). Não coletamos GPS.</p>
+  <h3>2. Local storage</h3>
+  <p>Your app data is stored on your device using local app storage. Processing for reports, history, weekly summaries, monthly summaries, categories, recurring transactions, and CSV exports is performed locally inside the app.</p>
+  <p>WTFunds does not currently provide account login, cloud synchronization, or online backup. If you delete the app or lose access to your device, locally stored data may be lost unless you exported it beforehand.</p>
 
-      <h3>2. Armazenamento e processamento</h3>
-      <ul>
-        <li>Dados de despesas: somente no dispositivo</li>
-        <li>Processamento: local</li>
-        <li>Analytics (se ativado): processado pelo Google Firebase</li>
-      </ul>
+  <h3>3. CSV export</h3>
+  <p>CSV files are generated locally on your device. WTFunds does not receive, store, or transmit exported CSV files. After export, you are responsible for where you save, send, or share those files.</p>
 
-      <h3>3. Login e contas</h3>
-      <p>Sem login e sem criação de conta.</p>
+  <h3>4. Firebase Analytics</h3>
+  <p>WTFunds may use Google Firebase Analytics to understand app usage and improve the product. Analytics is limited to technical and usage events, such as opening screens, using features, changing periods, creating a record, viewing reports, starting CSV export, or interacting with premium features.</p>
+  <p><strong>We do not send the contents of your financial records to Firebase Analytics.</strong> This means we do not send expense amounts, income amounts, notes, category names created by you, transaction history, CSV contents, or recurring transaction details as analytics event data.</p>
+  <p>Firebase Analytics may process technical information such as device type, operating system, app version, language, time zone, general usage interactions, and approximate location derived from IP address. WTFunds does not collect precise GPS location.</p>
 
-      <h3>4. Permissões</h3>
-      <p>Sem permissões sensíveis (contatos, localização por GPS, câmera, microfone).</p>
+  <h3>5. Analytics control</h3>
+  <p>If the app provides an analytics sharing setting, you can disable analytics sharing from the app settings. When disabled, WTFunds stops sending optional analytics events from the app.</p>
 
-      <h3>5. Contato</h3>
-      <a class="email" href="mailto:wtfunds.app@gmail.com">wtfunds.app@gmail.com</a>
-    </div>
+  <h3>6. Premium subscriptions and purchases</h3>
+  <p>WTFunds may offer monthly and annual Premium subscriptions. Purchases are processed by the Apple App Store or Google Play Store. WTFunds does not collect or store your credit card information.</p>
+  <p>We may use RevenueCat or similar trusted subscription infrastructure to manage Premium access, subscription status, product identifiers, renewal status, and purchase entitlement information. RevenueCat does not receive the financial records you enter in WTFunds.</p>
+
+  <h3>7. Data sharing</h3>
+  <p>We do not sell, rent, or trade your personal data. We only use third-party services when necessary to provide analytics or subscription functionality, such as Google Firebase Analytics and RevenueCat.</p>
+
+  <h3>8. Permissions</h3>
+  <p>WTFunds does not require sensitive permissions such as contacts, precise GPS location, camera, or microphone for its core expense tracking functionality.</p>
+
+  <h3>9. Deleting your data</h3>
+  <p>Because your financial data is stored locally, you can delete records inside the app or uninstall the app to remove locally stored app data from your device. Some technical analytics or purchase records may remain with third-party providers according to their own retention policies.</p>
+
+  <h3>10. Children</h3>
+  <p>WTFunds is not directed to children and does not knowingly collect personal information from children under 13.</p>
+
+  <h3>11. Changes to this policy</h3>
+  <p>We may update this Privacy Policy from time to time. The updated version will be posted on this page with a new “Last updated” date.</p>
+
+  <h3>12. Contact</h3>
+  <p>Questions about privacy? Contact us at <a href="mailto:wtfunds.app@gmail.com">wtfunds.app@gmail.com</a>.</p>
+</section>
+
+<section id="pt" class="card">
+  <h2>Política de Privacidade</h2>
+  <p><strong>Última atualização:</strong> 14 de junho de 2026</p>
+
+  <div class="notice">
+    <strong>Resumo:</strong> O WTFunds foi criado para funcionar localmente. Gastos, ganhos, observações, categorias, transações recorrentes e exportações CSV ficam no seu dispositivo, a menos que você escolha compartilhar ou exportar esses dados.
   </div>
 
-  <!-- EN -->
-  <div id="view-en" class="lang">
-    <div class="card">
-      <h2>Privacy Policy</h2>
-      <p class="muted"><strong>Last updated:</strong> February 10, 2026</p>
-      <p>Where The Funds works locally. Your expense data stays on your device. The app may use optional analytics to improve the experience.</p>
+  <h3>1. Informações inseridas no app</h3>
+  <p>O WTFunds permite registrar informações financeiras pessoais, incluindo gastos, ganhos, categorias, datas, moedas, observações, categorias customizadas e regras de gastos ou ganhos recorrentes.</p>
+  <p>Essas informações são armazenadas localmente no seu dispositivo. Nós não operamos um servidor que recebe ou armazena seus registros financeiros, histórico de transações, observações, categorias, arquivos CSV ou detalhes de transações recorrentes.</p>
 
-      <h3>1. Information we collect</h3>
-      <p><strong>Expense data (local):</strong> stored on your device only.</p>
-      <p><strong>Analytics (optional):</strong> if enabled, we use Google Firebase Analytics to collect usage events and technical info (including approximate location derived from IP). We do not collect GPS.</p>
+  <h3>2. Armazenamento local</h3>
+  <p>Os dados do app são armazenados no dispositivo usando armazenamento local do aplicativo. O processamento de relatórios, histórico, resumo semanal, resumo mensal, categorias, recorrências e exportação CSV acontece localmente no app.</p>
+  <p>O WTFunds atualmente não oferece login, sincronização em nuvem ou backup online. Se você apagar o app ou perder acesso ao dispositivo, os dados locais podem ser perdidos, a menos que tenham sido exportados anteriormente.</p>
 
-      <h3>2. Data storage and processing</h3>
-      <ul>
-        <li>Expense data: on-device only</li>
-        <li>Processing: local</li>
-        <li>Analytics (if enabled): processed by Google Firebase</li>
-      </ul>
+  <h3>3. Exportação CSV</h3>
+  <p>Arquivos CSV são gerados localmente no seu dispositivo. O WTFunds não recebe, armazena ou transmite arquivos CSV exportados. Depois da exportação, você é responsável por onde salva, envia ou compartilha esses arquivos.</p>
 
-      <h3>3. Accounts and login</h3>
-      <p>No login and no user accounts.</p>
+  <h3>4. Firebase Analytics</h3>
+  <p>O WTFunds pode usar Google Firebase Analytics para entender o uso do app e melhorar o produto. O analytics é limitado a eventos técnicos e de uso, como abrir telas, usar funcionalidades, alterar períodos, criar um registro, visualizar relatórios, iniciar exportação CSV ou interagir com recursos Premium.</p>
+  <p><strong>Nós não enviamos o conteúdo dos seus registros financeiros para o Firebase Analytics.</strong> Isso significa que não enviamos valores de gastos, valores de ganhos, observações, nomes de categorias criadas por você, histórico de transações, conteúdo de CSV ou detalhes de recorrências como dados de evento de analytics.</p>
+  <p>O Firebase Analytics pode processar informações técnicas como tipo de dispositivo, sistema operacional, versão do app, idioma, fuso horário, interações gerais de uso e localização aproximada derivada do IP. O WTFunds não coleta localização precisa por GPS.</p>
 
-      <h3>4. Permissions</h3>
-      <p>No sensitive permissions (contacts, GPS location, camera, microphone).</p>
+  <h3>5. Controle de analytics</h3>
+  <p>Se o app oferecer uma opção de compartilhamento de analytics, você pode desativá-la nas configurações do app. Quando desativado, o WTFunds para de enviar eventos opcionais de analytics pelo aplicativo.</p>
 
-      <h3>5. Contact</h3>
-      <a class="email" href="mailto:wtfunds.app@gmail.com">wtfunds.app@gmail.com</a>
-    </div>
-  </div>
-</main>
+  <h3>6. Assinaturas Premium e compras</h3>
+  <p>O WTFunds pode oferecer assinaturas Premium mensais e anuais. As compras são processadas pela Apple App Store ou Google Play Store. O WTFunds não coleta nem armazena informações de cartão de crédito.</p>
+  <p>Podemos usar RevenueCat ou infraestrutura similar confiável de assinatura para gerenciar acesso Premium, status da assinatura, identificadores de produtos, status de renovação e informações de entitlement. A RevenueCat não recebe os registros financeiros que você insere no WTFunds.</p>
 
-<footer>
-  <p>© <span id="year"></span> Where The Funds</p>
-</footer>
+  <h3>7. Compartilhamento de dados</h3>
+  <p>Nós não vendemos, alugamos ou comercializamos seus dados pessoais. Usamos serviços de terceiros apenas quando necessário para analytics ou funcionalidade de assinatura, como Google Firebase Analytics e RevenueCat.</p>
 
-<script>
-  const btnBoth = document.getElementById('btn-both');
-  const btnPt = document.getElementById('btn-pt');
-  const btnEn = document.getElementById('btn-en');
+  <h3>8. Permissões</h3>
+  <p>O WTFunds não exige permissões sensíveis como contatos, localização precisa por GPS, câmera ou microfone para sua funcionalidade principal de controle de gastos.</p>
 
-  const viewBoth = document.getElementById('view-both');
-  const viewPt = document.getElementById('view-pt');
-  const viewEn = document.getElementById('view-en');
+  <h3>9. Exclusão dos seus dados</h3>
+  <p>Como seus dados financeiros são armazenados localmente, você pode apagar registros dentro do app ou desinstalar o app para remover os dados locais do dispositivo. Alguns registros técnicos de analytics ou compra podem permanecer com provedores terceiros conforme suas próprias políticas de retenção.</p>
 
-  function setPressed(active){
-    btnBoth.setAttribute('aria-pressed', active === 'both' ? 'true' : 'false');
-    btnPt.setAttribute('aria-pressed', active === 'pt' ? 'true' : 'false');
-    btnEn.setAttribute('aria-pressed', active === 'en' ? 'true' : 'false');
-  }
+  <h3>10. Crianças</h3>
+  <p>O WTFunds não é direcionado a crianças e não coleta intencionalmente informações pessoais de menores de 13 anos.</p>
 
-  function show(which){
-    viewBoth.classList.toggle('active', which === 'both');
-    viewPt.classList.toggle('active', which === 'pt');
-    viewEn.classList.toggle('active', which === 'en');
-    setPressed(which);
-    const hash = which === 'both' ? '#both' : (which === 'pt' ? '#pt' : '#en');
-    history.replaceState(null, '', hash);
-  }
+  <h3>11. Alterações nesta política</h3>
+  <p>Podemos atualizar esta Política de Privacidade periodicamente. A versão atualizada será publicada nesta página com uma nova data de “Última atualização”.</p>
 
-  btnBoth.addEventListener('click', ()=>show('both'));
-  btnPt.addEventListener('click', ()=>show('pt'));
-  btnEn.addEventListener('click', ()=>show('en'));
+  <h3>12. Contato</h3>
+  <p>Dúvidas sobre privacidade? Entre em contato em <a href="mailto:wtfunds.app@gmail.com">wtfunds.app@gmail.com</a>.</p>
+</section>
 
-  const hash = (location.hash || '#both').toLowerCase();
-  if(hash === '#pt') show('pt');
-  else if(hash === '#en') show('en');
-  else show('both');
 
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+    <footer class="footer">
+      © 2026 WTFunds — Where The Funds. Contact: <a href="mailto:wtfunds.app@gmail.com">wtfunds.app@gmail.com</a>
+    </footer>
+  </main>
 </body>
 </html>
