@@ -1,223 +1,239 @@
-<!doctype html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Where The Funds — Terms of Use / Termos de Uso</title>
-  <meta name="description" content="Terms of Use / Termos de Uso for Where the Funds." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Where The Funds legal and support information." />
+  <title>WTFunds — Terms of Use</title>
   <style>
-    :root{
-      color-scheme: light dark;
-      --purple-dark:#1A0648;
-      --green-neon:#CDF73F;
-      --green-bright:#6DE32F;
-      --green-mid:#24A42F;
-      --green-dark:#105031;
-      --text:#ffffff;
-      --muted:rgba(255,255,255,.82);
-      --border:rgba(255,255,255,.18);
-      --card:rgba(255,255,255,.06);
-      --shadow:0 10px 30px rgba(0,0,0,.25);
-      --radius:16px;
-    }
-    body{
-      margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      line-height:1.6;
-      color:var(--text);
-      background:linear-gradient(180deg,#0f0729 0%, var(--purple-dark) 100%);
-    }
-    header, main, footer{ max-width:920px; margin:0 auto; padding:20px; }
-    header{ border-bottom:1px solid var(--border); }
-    h1{ margin:0; font-size:1.55rem; color:var(--green-neon); }
-    .meta{ margin:6px 0 0; color:var(--muted); }
-    nav{ display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
-    a.navlink{
-      text-decoration:none; color:var(--text);
-      border:1px solid var(--green-dark);
-      padding:8px 12px; border-radius:12px; font-weight:650;
-      background:rgba(0,0,0,.10);
-    }
-    a.navlink:hover{ border-color:var(--green-neon); }
-    .tabs{ display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
-    .tabs button{
-      border:1px solid var(--green-dark);
-      background:transparent; color:var(--text);
-      padding:8px 12px; border-radius:12px;
-      cursor:pointer; font-weight:700;
-    }
-    .tabs button[aria-pressed="true"]{
-      background:var(--green-mid); color:#000; border-color:var(--green-neon);
-    }
-    .card{
-      margin-top:20px; background:var(--card);
-      border:1px solid var(--border); border-radius:var(--radius);
-      padding:20px; box-shadow:var(--shadow);
-    }
-    h2{ margin:0 0 10px; font-size:1.2rem; color:var(--green-bright); }
-    h3{ margin:18px 0 8px; font-size:1.05rem; color:var(--green-neon); }
-    .lang{ display:none; }
-    .lang.active{ display:block; }
-    .email{
-      color:var(--green-neon);
-      font-weight:800;
-      text-decoration:none;
-      border-bottom:1px dashed rgba(205,247,63,.55);
-    }
-    .email:hover{ border-bottom-color:var(--green-neon); }
-    footer{ border-top:1px solid var(--border); color:var(--muted); font-size:.95rem; }
-    .pill{
-      display:inline-block;
-      border:1px solid var(--border);
-      border-radius:999px;
-      padding:2px 10px;
-      font-size:.92rem;
-      color:var(--muted);
-    }
-  </style>
+:root {
+  --bg: #0f1020;
+  --card: #17182c;
+  --text: #f4f4f7;
+  --muted: #b8b8c7;
+  --accent: #8b5cf6;
+  --accent-2: #22c55e;
+  --border: rgba(255,255,255,0.12);
+  --link: #c4b5fd;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: radial-gradient(circle at top left, rgba(139,92,246,0.22), transparent 32%), var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+}
+.wrapper {
+  width: min(980px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0 56px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  padding: 18px 0 24px;
+}
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.brand strong { font-size: 1.15rem; letter-spacing: 0.2px; }
+.brand span { color: var(--muted); font-size: 0.92rem; }
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+nav a, .lang a {
+  color: var(--text);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.04);
+}
+nav a.active {
+  border-color: var(--accent);
+  background: rgba(139,92,246,0.2);
+}
+.hero {
+  border: 1px solid var(--border);
+  background: rgba(23,24,44,0.82);
+  border-radius: 24px;
+  padding: 32px;
+  margin-bottom: 22px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+.hero h1 {
+  margin: 0 0 8px;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.1;
+}
+.hero p { margin: 0; color: var(--muted); max-width: 760px; }
+.card {
+  border: 1px solid var(--border);
+  background: rgba(23,24,44,0.74);
+  border-radius: 20px;
+  padding: 26px;
+  margin: 18px 0;
+}
+h2 { margin-top: 0; font-size: 1.55rem; }
+h3 { margin-top: 26px; color: #ffffff; }
+p, li { color: var(--muted); }
+strong { color: #ffffff; }
+a { color: var(--link); }
+ul { padding-left: 22px; }
+.notice {
+  border-left: 4px solid var(--accent-2);
+  padding: 12px 16px;
+  background: rgba(34,197,94,0.08);
+  border-radius: 12px;
+  margin: 18px 0;
+}
+.lang {
+  display: flex;
+  gap: 10px;
+  margin: 16px 0 0;
+}
+.footer {
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  margin-top: 32px;
+  padding-top: 20px;
+  font-size: 0.92rem;
+}
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 34px 0;
+}
+@media (max-width: 720px) {
+  .header { flex-direction: column; align-items: flex-start; }
+  .hero, .card { padding: 22px; }
+}
+</style>
 </head>
-
 <body>
-<header>
-  <h1>Terms of Use / Termos de Uso</h1>
-  <p class="meta">
-    Where The Funds<br />
-    <span class="pill">Last updated / Última atualização: February 10, 2026</span>
-  </p>
+  <main class="wrapper">
+    <header class="header">
+      <div class="brand">
+        <strong>WTFunds — Where The Funds</strong>
+        <span>Because yesterday it made sense.</span>
+      </div>
+      
+    <nav aria-label="Main navigation">
+      <a class="" href="index.html#both">Privacy</a>
+      <a class="active" href="terms.html#both">Terms</a>
+      <a class="" href="support.html#both">Support</a>
+    </nav>
+    
+    </header>
 
-  <nav aria-label="Site navigation">
-    <a class="navlink" href="index.html">Privacy</a>
-    <a class="navlink" href="terms.html">Terms</a>
-    <a class="navlink" href="support.html">Support</a>
-  </nav>
+    <section class="hero">
+      <h1>Terms of Use / Termos de Uso</h1>
+      <p>The terms for using WTFunds, including Premium subscriptions, local data, CSV export, and app limitations.</p>
+      <div class="lang">
+        <a href="#en">English</a>
+        <a href="#pt">Português</a>
+        <a href="#both">Both</a>
+      </div>
+    </section>
 
-  <div class="tabs" role="tablist" aria-label="Language switch">
-    <button id="btn-both" type="button" aria-pressed="true">PT + EN</button>
-    <button id="btn-pt" type="button" aria-pressed="false">Português</button>
-    <button id="btn-en" type="button" aria-pressed="false">English</button>
-  </div>
-</header>
+    
+<section id="both"></section>
 
-<main>
-  <div id="view-both" class="lang active">
-    <div class="card">
-      <h2>Termos de Uso (Português)</h2>
-      <p>Ao usar o <strong>Where The Funds</strong>, você concorda com estes Termos.</p>
+<section id="en" class="card">
+  <h2>Terms of Use</h2>
+  <p><strong>Last updated:</strong> June 14, 2026</p>
+  <p>By downloading, accessing, or using WTFunds — Where The Funds, you agree to these Terms of Use.</p>
 
-      <h3>1. Sobre o aplicativo</h3>
-      <p>O Where The Funds é um aplicativo de organização/registro de despesas pessoais. Ele não oferece consultoria financeira profissional.</p>
+  <h3>1. About WTFunds</h3>
+  <p>WTFunds is a personal finance organization app that helps users record expenses and income, view history, create weekly and monthly summaries, manage categories, export CSV files, and use recurring expense or income features.</p>
+  <p>WTFunds is not a bank, financial institution, accounting service, tax service, or professional financial advisor. The app is provided for personal organization only.</p>
 
-      <h3>2. Uso permitido</h3>
-      <p>Você pode usar o aplicativo para fins pessoais e legais. Você concorda em não:</p>
-      <ul>
-        <li>Usar o app para atividades ilegais</li>
-        <li>Interferir no funcionamento do app (ex.: engenharia reversa, exploração de falhas)</li>
-        <li>Copiar/redistribuir o app fora do permitido pela loja (Apple/Google)</li>
-      </ul>
+  <h3>2. Your responsibility</h3>
+  <p>You are responsible for the accuracy of the information you enter and for decisions made based on that information. WTFunds does not verify your records and does not provide financial, investment, tax, legal, or accounting advice.</p>
 
-      <h3>3. Dados do usuário</h3>
-      <p>Os dados são armazenados e processados localmente no seu dispositivo. Você é responsável por manter backups e proteger o acesso ao seu aparelho.</p>
-      <p>Veja detalhes na <a class="email" href="index.html">Política de Privacidade</a>.</p>
+  <h3>3. Local data and backups</h3>
+  <p>Most app data is stored locally on your device. You are responsible for maintaining backups, exporting data when needed, and protecting access to your device. If the app is deleted or your device is lost, local data may be lost.</p>
 
-      <h3>4. Limitação de responsabilidade</h3>
-      <p>O app é fornecido “como está”. Na medida permitida por lei, não nos responsabilizamos por perdas indiretas, perda de dados ou decisões tomadas com base nas informações registradas no app.</p>
+  <h3>4. Acceptable use</h3>
+  <p>You agree to use WTFunds only for lawful and personal purposes. You agree not to misuse the app, attempt to reverse engineer it, interfere with its operation, exploit vulnerabilities, or redistribute the app outside official app stores or other authorized channels.</p>
 
-      <h3>5. Propriedade intelectual</h3>
-      <p>O Where The Funds e seus conteúdos (nome, visual e interface) pertencem ao desenvolvedor. Não é permitido copiar ou redistribuir sem autorização.</p>
+  <h3>5. Premium subscriptions</h3>
+  <p>WTFunds may offer monthly and annual Premium subscriptions that unlock additional features, such as recurring transactions, advanced history filters, CSV export, unlimited custom categories, or other premium functionality.</p>
+  <p>Subscription prices, trial offers, renewal terms, cancellation options, and billing are managed by the Apple App Store or Google Play Store. Your subscription automatically renews unless canceled according to the store’s rules. You can manage or cancel your subscription through your Apple or Google account settings.</p>
+  <p>Premium features may change over time as the app evolves. If a subscription expires or is canceled, access to Premium-only features may be limited, but your locally stored data remains on your device unless you delete it.</p>
 
-      <h3>6. Atualizações e mudanças</h3>
-      <p>Podemos atualizar o app e estes Termos. Mudanças relevantes serão publicadas nesta página.</p>
+  <h3>6. CSV export</h3>
+  <p>CSV export is provided as a convenience feature. You are responsible for checking exported files before relying on them and for protecting exported files after they leave the app.</p>
 
-      <h3>7. Contato</h3>
-      <p>Dúvidas sobre estes Termos: <a class="email" href="mailto:wtfunds.app@gmail.com">wtfunds.app@gmail.com</a></p>
-    </div>
+  <h3>7. App availability and changes</h3>
+  <p>We may update, modify, suspend, or discontinue parts of the app at any time. We may also update these Terms when needed. Material changes will be posted on this page.</p>
 
-    <div class="card">
-      <h2>Terms of Use (English)</h2>
-      <p>By using <strong>Where The Funds</strong>, you agree to these Terms.</p>
+  <h3>8. Intellectual property</h3>
+  <p>WTFunds, including its name, design, interface, text, and visual assets, belongs to the developer unless otherwise stated. You may not copy, modify, redistribute, or create derivative works from the app without permission, except as allowed by law.</p>
 
-      <h3>1. About the app</h3>
-      <p>Where The Funds is a personal expense tracking/organization app. It does not provide professional financial advice.</p>
+  <h3>9. Disclaimer</h3>
+  <p>WTFunds is provided “as is” and “as available.” We do not guarantee that the app will be error-free, uninterrupted, or suitable for every financial or accounting need.</p>
 
-      <h3>2. Acceptable use</h3>
-      <p>You may use the app for personal and lawful purposes. You agree not to:</p>
-      <ul>
-        <li>Use the app for illegal activities</li>
-        <li>Interfere with the app (e.g., reverse engineering, exploiting vulnerabilities)</li>
-        <li>Copy/redistribute the app beyond what is allowed by the stores (Apple/Google)</li>
-      </ul>
+  <h3>10. Limitation of liability</h3>
+  <p>To the extent permitted by law, we are not liable for indirect, incidental, special, consequential, or punitive damages, including loss of data, loss of profits, or decisions made based on information recorded in the app.</p>
 
-      <h3>3. User data</h3>
-      <p>Data is stored and processed locally on your device. You are responsible for backups and for protecting access to your device.</p>
-      <p>See details in the <a class="email" href="index.html">Privacy Policy</a>.</p>
+  <h3>11. Contact</h3>
+  <p>Questions about these Terms? Contact us at <a href="mailto:wtfunds.app@gmail.com">wtfunds.app@gmail.com</a>.</p>
+</section>
 
-      <h3>4. Limitation of liability</h3>
-      <p>The app is provided “as is”. To the extent permitted by law, we are not liable for indirect damages, data loss, or decisions made based on information recorded in the app.</p>
+<section id="pt" class="card">
+  <h2>Termos de Uso</h2>
+  <p><strong>Última atualização:</strong> 14 de junho de 2026</p>
+  <p>Ao baixar, acessar ou usar o WTFunds — Where The Funds, você concorda com estes Termos de Uso.</p>
 
-      <h3>5. Intellectual property</h3>
-      <p>Where The Funds and its content (name, look and interface) belong to the developer. Copying or redistribution without permission is not allowed.</p>
+  <h3>1. Sobre o WTFunds</h3>
+  <p>O WTFunds é um app de organização financeira pessoal que ajuda usuários a registrar gastos e ganhos, visualizar histórico, criar resumos semanais e mensais, gerenciar categorias, exportar CSV e usar recursos de gastos ou ganhos recorrentes.</p>
+  <p>O WTFunds não é banco, instituição financeira, serviço contábil, serviço tributário ou consultor financeiro profissional. O app é fornecido apenas para organização pessoal.</p>
 
-      <h3>6. Updates and changes</h3>
-      <p>We may update the app and these Terms. Material changes will be posted on this page.</p>
+  <h3>2. Sua responsabilidade</h3>
+  <p>Você é responsável pela precisão das informações inseridas e pelas decisões tomadas com base nelas. O WTFunds não verifica seus registros e não fornece aconselhamento financeiro, de investimento, tributário, jurídico ou contábil.</p>
 
-      <h3>7. Contact</h3>
-      <p>Questions about these Terms: <a class="email" href="mailto:wtfunds.app@gmail.com">wtfunds.app@gmail.com</a></p>
-    </div>
-  </div>
+  <h3>3. Dados locais e backups</h3>
+  <p>A maior parte dos dados do app é armazenada localmente no seu dispositivo. Você é responsável por manter backups, exportar dados quando necessário e proteger o acesso ao seu dispositivo. Se o app for apagado ou o dispositivo for perdido, os dados locais podem ser perdidos.</p>
 
-  <div id="view-pt" class="lang">
-    <div class="card">
-      <h2>Termos de Uso</h2>
-      <p class="muted"><strong>Última atualização:</strong> 10 de fevereiro de 2026</p>
-      <p>Uso pessoal e legal. App “como está”. Dados locais no dispositivo. Contato: <a class="email" href="mailto:wtfunds.app@gmail.com">wtfunds.app@gmail.com</a></p>
-    </div>
-  </div>
+  <h3>4. Uso permitido</h3>
+  <p>Você concorda em usar o WTFunds apenas para fins pessoais e legais. Você concorda em não usar o app de forma indevida, tentar engenharia reversa, interferir no funcionamento, explorar vulnerabilidades ou redistribuir o app fora das lojas oficiais ou canais autorizados.</p>
 
-  <div id="view-en" class="lang">
-    <div class="card">
-      <h2>Terms of Use</h2>
-      <p class="muted"><strong>Last updated:</strong> February 10, 2026</p>
-      <p>Personal/lawful use. “As is”. On-device data. Contact: <a class="email" href="mailto:wtfunds.app@gmail.com">wtfunds.app@gmail.com</a></p>
-    </div>
-  </div>
-</main>
+  <h3>5. Assinaturas Premium</h3>
+  <p>O WTFunds pode oferecer assinaturas Premium mensais e anuais que desbloqueiam recursos adicionais, como transações recorrentes, filtros avançados no histórico, exportação CSV, categorias customizadas ilimitadas ou outras funcionalidades Premium.</p>
+  <p>Preços, ofertas de teste, termos de renovação, opções de cancelamento e cobrança são gerenciados pela Apple App Store ou Google Play Store. A assinatura renova automaticamente, a menos que seja cancelada conforme as regras da loja. Você pode gerenciar ou cancelar sua assinatura nas configurações da sua conta Apple ou Google.</p>
+  <p>Recursos Premium podem mudar ao longo do tempo conforme o app evolui. Se a assinatura expirar ou for cancelada, o acesso a recursos exclusivos do Premium pode ser limitado, mas seus dados locais permanecem no dispositivo, a menos que você os apague.</p>
 
-<footer>
-  <p>© <span id="year"></span> Where The Funds</p>
-</footer>
+  <h3>6. Exportação CSV</h3>
+  <p>A exportação CSV é fornecida como uma funcionalidade de conveniência. Você é responsável por verificar os arquivos exportados antes de usá-los e por proteger esses arquivos depois que saem do app.</p>
 
-<script>
-  const btnBoth = document.getElementById('btn-both');
-  const btnPt = document.getElementById('btn-pt');
-  const btnEn = document.getElementById('btn-en');
+  <h3>7. Disponibilidade e alterações</h3>
+  <p>Podemos atualizar, modificar, suspender ou descontinuar partes do app a qualquer momento. Também podemos atualizar estes Termos quando necessário. Alterações relevantes serão publicadas nesta página.</p>
 
-  const viewBoth = document.getElementById('view-both');
-  const viewPt = document.getElementById('view-pt');
-  const viewEn = document.getElementById('view-en');
+  <h3>8. Propriedade intelectual</h3>
+  <p>O WTFunds, incluindo nome, design, interface, textos e elementos visuais, pertence ao desenvolvedor, salvo indicação em contrário. Você não pode copiar, modificar, redistribuir ou criar obras derivadas do app sem permissão, exceto quando permitido por lei.</p>
 
-  function setPressed(active){
-    btnBoth.setAttribute('aria-pressed', active === 'both' ? 'true' : 'false');
-    btnPt.setAttribute('aria-pressed', active === 'pt' ? 'true' : 'false');
-    btnEn.setAttribute('aria-pressed', active === 'en' ? 'true' : 'false');
-  }
-  function show(which){
-    viewBoth.classList.toggle('active', which === 'both');
-    viewPt.classList.toggle('active', which === 'pt');
-    viewEn.classList.toggle('active', which === 'en');
-    setPressed(which);
-    const hash = which === 'both' ? '#both' : (which === 'pt' ? '#pt' : '#en');
-    history.replaceState(null, '', hash);
-  }
-  btnBoth.addEventListener('click', ()=>show('both'));
-  btnPt.addEventListener('click', ()=>show('pt'));
-  btnEn.addEventListener('click', ()=>show('en'));
+  <h3>9. Isenção de garantias</h3>
+  <p>O WTFunds é fornecido “como está” e “conforme disponível”. Não garantimos que o app será livre de erros, ininterrupto ou adequado para todas as necessidades financeiras ou contábeis.</p>
 
-  const hash = (location.hash || '#both').toLowerCase();
-  if(hash === '#pt') show('pt');
-  else if(hash === '#en') show('en');
-  else show('both');
+  <h3>10. Limitação de responsabilidade</h3>
+  <p>Na medida permitida por lei, não nos responsabilizamos por danos indiretos, incidentais, especiais, consequenciais ou punitivos, incluindo perda de dados, perda de lucros ou decisões tomadas com base em informações registradas no app.</p>
 
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+  <h3>11. Contato</h3>
+  <p>Dúvidas sobre estes Termos? Entre em contato em <a href="mailto:wtfunds.app@gmail.com">wtfunds.app@gmail.com</a>.</p>
+</section>
+
+
+    <footer class="footer">
+      © 2026 WTFunds — Where The Funds. Contact: <a href="mailto:wtfunds.app@gmail.com">wtfunds.app@gmail.com</a>
+    </footer>
+  </main>
 </body>
 </html>
