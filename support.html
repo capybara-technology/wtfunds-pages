@@ -1,188 +1,209 @@
-<!doctype html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Where The Funds — Support / Suporte</title>
-  <meta name="description" content="Support page for Where the Funds." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Where The Funds legal and support information." />
+  <title>WTFunds — Support</title>
   <style>
-    :root{
-      color-scheme: light dark;
-      --purple-dark:#1A0648;
-      --green-neon:#CDF73F;
-      --green-bright:#6DE32F;
-      --green-mid:#24A42F;
-      --green-dark:#105031;
-      --text:#ffffff;
-      --muted:rgba(255,255,255,.82);
-      --border:rgba(255,255,255,.18);
-      --card:rgba(255,255,255,.06);
-      --shadow:0 10px 30px rgba(0,0,0,.25);
-      --radius:16px;
-    }
-    body{
-      margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      line-height:1.6;
-      color:var(--text);
-      background:linear-gradient(180deg,#0f0729 0%, var(--purple-dark) 100%);
-    }
-    header, main, footer{ max-width:920px; margin:0 auto; padding:20px; }
-    header{ border-bottom:1px solid var(--border); }
-    h1{ margin:0; font-size:1.55rem; color:var(--green-neon); }
-    .meta{ margin:6px 0 0; color:var(--muted); }
-    nav{ display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
-    a.navlink{
-      text-decoration:none; color:var(--text);
-      border:1px solid var(--green-dark);
-      padding:8px 12px; border-radius:12px; font-weight:650;
-      background:rgba(0,0,0,.10);
-    }
-    a.navlink:hover{ border-color:var(--green-neon); }
-    .tabs{ display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
-    .tabs button{
-      border:1px solid var(--green-dark);
-      background:transparent; color:var(--text);
-      padding:8px 12px; border-radius:12px;
-      cursor:pointer; font-weight:700;
-    }
-    .tabs button[aria-pressed="true"]{
-      background:var(--green-mid); color:#000; border-color:var(--green-neon);
-    }
-    .card{
-      margin-top:20px; background:var(--card);
-      border:1px solid var(--border); border-radius:var(--radius);
-      padding:20px; box-shadow:var(--shadow);
-    }
-    h2{ margin:0 0 10px; font-size:1.2rem; color:var(--green-bright); }
-    h3{ margin:18px 0 8px; font-size:1.05rem; color:var(--green-neon); }
-    .lang{ display:none; }
-    .lang.active{ display:block; }
-    .email{
-      color:var(--green-neon);
-      font-weight:800;
-      text-decoration:none;
-      border-bottom:1px dashed rgba(205,247,63,.55);
-    }
-    .email:hover{ border-bottom-color:var(--green-neon); }
-    code{
-      background:rgba(0,0,0,.25);
-      border:1px solid var(--border);
-      padding:2px 8px;
-      border-radius:10px;
-    }
-    footer{ border-top:1px solid var(--border); color:var(--muted); font-size:.95rem; }
-  </style>
+:root {
+  --bg: #0f1020;
+  --card: #17182c;
+  --text: #f4f4f7;
+  --muted: #b8b8c7;
+  --accent: #8b5cf6;
+  --accent-2: #22c55e;
+  --border: rgba(255,255,255,0.12);
+  --link: #c4b5fd;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: radial-gradient(circle at top left, rgba(139,92,246,0.22), transparent 32%), var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+}
+.wrapper {
+  width: min(980px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0 56px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  padding: 18px 0 24px;
+}
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.brand strong { font-size: 1.15rem; letter-spacing: 0.2px; }
+.brand span { color: var(--muted); font-size: 0.92rem; }
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+nav a, .lang a {
+  color: var(--text);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.04);
+}
+nav a.active {
+  border-color: var(--accent);
+  background: rgba(139,92,246,0.2);
+}
+.hero {
+  border: 1px solid var(--border);
+  background: rgba(23,24,44,0.82);
+  border-radius: 24px;
+  padding: 32px;
+  margin-bottom: 22px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+.hero h1 {
+  margin: 0 0 8px;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.1;
+}
+.hero p { margin: 0; color: var(--muted); max-width: 760px; }
+.card {
+  border: 1px solid var(--border);
+  background: rgba(23,24,44,0.74);
+  border-radius: 20px;
+  padding: 26px;
+  margin: 18px 0;
+}
+h2 { margin-top: 0; font-size: 1.55rem; }
+h3 { margin-top: 26px; color: #ffffff; }
+p, li { color: var(--muted); }
+strong { color: #ffffff; }
+a { color: var(--link); }
+ul { padding-left: 22px; }
+.notice {
+  border-left: 4px solid var(--accent-2);
+  padding: 12px 16px;
+  background: rgba(34,197,94,0.08);
+  border-radius: 12px;
+  margin: 18px 0;
+}
+.lang {
+  display: flex;
+  gap: 10px;
+  margin: 16px 0 0;
+}
+.footer {
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  margin-top: 32px;
+  padding-top: 20px;
+  font-size: 0.92rem;
+}
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 34px 0;
+}
+@media (max-width: 720px) {
+  .header { flex-direction: column; align-items: flex-start; }
+  .hero, .card { padding: 22px; }
+}
+</style>
 </head>
-
 <body>
-<header>
-  <h1>Support / Suporte</h1>
-  <p class="meta">Where The Funds</p>
+  <main class="wrapper">
+    <header class="header">
+      <div class="brand">
+        <strong>WTFunds — Where The Funds</strong>
+        <span>Because yesterday it made sense.</span>
+      </div>
+      
+    <nav aria-label="Main navigation">
+      <a class="" href="index.html#both">Privacy</a>
+      <a class="" href="terms.html#both">Terms</a>
+      <a class="active" href="support.html#both">Support</a>
+    </nav>
+    
+    </header>
 
-  <nav aria-label="Site navigation">
-    <a class="navlink" href="index.html">Privacy</a>
-    <a class="navlink" href="terms.html">Terms</a>
-    <a class="navlink" href="support.html">Support</a>
-  </nav>
+    <section class="hero">
+      <h1>Support / Suporte</h1>
+      <p>Contact information and guidance for bug reports, Premium issues, CSV questions, and feedback.</p>
+      <div class="lang">
+        <a href="#en">English</a>
+        <a href="#pt">Português</a>
+        <a href="#both">Both</a>
+      </div>
+    </section>
 
-  <div class="tabs" role="tablist" aria-label="Language switch">
-    <button id="btn-both" type="button" aria-pressed="true">PT + EN</button>
-    <button id="btn-pt" type="button" aria-pressed="false">Português</button>
-    <button id="btn-en" type="button" aria-pressed="false">English</button>
-  </div>
-</header>
+    
+<section id="both"></section>
 
-<main>
-  <div id="view-both" class="lang active">
-    <div class="card">
-      <h2>Suporte (Português)</h2>
-      <p>Precisa de ajuda com o <strong>Where The Funds</strong>? Fale com a gente:</p>
-      <p><a class="email" href="mailto:wtfunds.app@gmail.com">wtfunds.app@gmail.com</a></p>
+<section id="en" class="card">
+  <h2>Support</h2>
+  <p>Need help with WTFunds — Where The Funds? Contact us at <a href="mailto:wtfunds.app@gmail.com">wtfunds.app@gmail.com</a>.</p>
 
-      <h3>O que enviar no e-mail (para eu te ajudar mais rápido)</h3>
-      <ul>
-        <li>Modelo do aparelho (ex.: iPhone 14 / Pixel 7)</li>
-        <li>Versão do sistema (iOS/Android)</li>
-        <li>Versão do app</li>
-        <li>O que você tentou fazer e o que aconteceu</li>
-      </ul>
+  <h3>What to include in your email</h3>
+  <ul>
+    <li>Your device model, such as iPhone 14 or Pixel 7</li>
+    <li>Your operating system version, such as iOS or Android version</li>
+    <li>Your WTFunds app version</li>
+    <li>A short description of what you were trying to do</li>
+    <li>Steps to reproduce the issue, if possible</li>
+    <li>Whether the issue happens every time or only sometimes</li>
+  </ul>
 
-      <h3>Privacidade</h3>
-      <p>Os dados são armazenados e processados localmente no seu dispositivo. Veja: <a class="email" href="index.html">Privacy Policy</a>.</p>
-    </div>
+  <h3>Premium and subscription issues</h3>
+  <p>For billing, renewal, cancellation, or refund requests, please manage your subscription through the Apple App Store or Google Play Store account used for the purchase. If Premium access is not appearing correctly inside the app, contact us and include your device, app version, and the store used for purchase.</p>
 
-    <div class="card">
-      <h2>Support (English)</h2>
-      <p>Need help with <strong>Where The Funds</strong>? Contact:</p>
-      <p><a class="email" href="mailto:wtfunds.app@gmail.com">wtfunds.app@gmail.com</a></p>
+  <h3>Data and CSV issues</h3>
+  <p>WTFunds stores financial records locally on your device. Please avoid sending private financial data unless it is necessary for support and you are comfortable sharing it. For CSV issues, you may describe the problem without attaching the exported file.</p>
 
-      <h3>What to include in your email (so I can help faster)</h3>
-      <ul>
-        <li>Device model (e.g., iPhone 14 / Pixel 7)</li>
-        <li>OS version (iOS/Android)</li>
-        <li>App version</li>
-        <li>What you tried to do and what happened</li>
-      </ul>
+  <h3>Feature requests and feedback</h3>
+  <p>We welcome feature requests, usability feedback, and bug reports. Send them to <a href="mailto:wtfunds.app@gmail.com">wtfunds.app@gmail.com</a>.</p>
 
-      <h3>Privacy</h3>
-      <p>Data is stored and processed locally on your device. See: <a class="email" href="index.html">Privacy Policy</a>.</p>
-    </div>
-  </div>
+  <h3>Privacy</h3>
+  <p>For details about data handling, local storage, Firebase Analytics, subscriptions, and CSV export, please read the <a href="index.html#en">Privacy Policy</a>.</p>
+</section>
 
-  <div id="view-pt" class="lang">
-    <div class="card">
-      <h2>Suporte</h2>
-      <p>E-mail: <a class="email" href="mailto:wtfunds.app@gmail.com">wtfunds.app@gmail.com</a></p>
-      <p>Inclua: aparelho, iOS/Android, versão do app e passos para reproduzir.</p>
-    </div>
-  </div>
+<section id="pt" class="card">
+  <h2>Suporte</h2>
+  <p>Precisa de ajuda com o WTFunds — Where The Funds? Entre em contato em <a href="mailto:wtfunds.app@gmail.com">wtfunds.app@gmail.com</a>.</p>
 
-  <div id="view-en" class="lang">
-    <div class="card">
-      <h2>Support</h2>
-      <p>Email: <a class="email" href="mailto:wtfunds.app@gmail.com">wtfunds.app@gmail.com</a></p>
-      <p>Please include: device, OS, app version, and steps to reproduce.</p>
-    </div>
-  </div>
-</main>
+  <h3>O que incluir no e-mail</h3>
+  <ul>
+    <li>Modelo do aparelho, como iPhone 14 ou Pixel 7</li>
+    <li>Versão do sistema operacional, como versão do iOS ou Android</li>
+    <li>Versão do app WTFunds</li>
+    <li>Uma breve descrição do que você estava tentando fazer</li>
+    <li>Passos para reproduzir o problema, se possível</li>
+    <li>Se o problema acontece sempre ou apenas às vezes</li>
+  </ul>
 
-<footer>
-  <p>© <span id="year"></span> Where The Funds</p>
-</footer>
+  <h3>Problemas com Premium e assinatura</h3>
+  <p>Para cobrança, renovação, cancelamento ou reembolso, gerencie sua assinatura pela conta da Apple App Store ou Google Play Store usada na compra. Se o acesso Premium não aparecer corretamente no app, entre em contato informando o dispositivo, versão do app e loja usada na compra.</p>
 
-<script>
-  const btnBoth = document.getElementById('btn-both');
-  const btnPt = document.getElementById('btn-pt');
-  const btnEn = document.getElementById('btn-en');
+  <h3>Problemas com dados e CSV</h3>
+  <p>O WTFunds armazena registros financeiros localmente no dispositivo. Evite enviar dados financeiros privados, a menos que seja necessário para o suporte e você esteja confortável em compartilhar. Para problemas com CSV, você pode descrever o problema sem anexar o arquivo exportado.</p>
 
-  const viewBoth = document.getElementById('view-both');
-  const viewPt = document.getElementById('view-pt');
-  const viewEn = document.getElementById('view-en');
+  <h3>Sugestões e feedback</h3>
+  <p>Sugestões de funcionalidades, feedback de usabilidade e relatos de bugs são bem-vindos. Envie para <a href="mailto:wtfunds.app@gmail.com">wtfunds.app@gmail.com</a>.</p>
 
-  function setPressed(active){
-    btnBoth.setAttribute('aria-pressed', active === 'both' ? 'true' : 'false');
-    btnPt.setAttribute('aria-pressed', active === 'pt' ? 'true' : 'false');
-    btnEn.setAttribute('aria-pressed', active === 'en' ? 'true' : 'false');
-  }
-  function show(which){
-    viewBoth.classList.toggle('active', which === 'both');
-    viewPt.classList.toggle('active', which === 'pt');
-    viewEn.classList.toggle('active', which === 'en');
-    setPressed(which);
-    const hash = which === 'both' ? '#both' : (which === 'pt' ? '#pt' : '#en');
-    history.replaceState(null, '', hash);
-  }
-  btnBoth.addEventListener('click', ()=>show('both'));
-  btnPt.addEventListener('click', ()=>show('pt'));
-  btnEn.addEventListener('click', ()=>show('en'));
+  <h3>Privacidade</h3>
+  <p>Para detalhes sobre tratamento de dados, armazenamento local, Firebase Analytics, assinaturas e exportação CSV, leia a <a href="index.html#pt">Política de Privacidade</a>.</p>
+</section>
 
-  const hash = (location.hash || '#both').toLowerCase();
-  if(hash === '#pt') show('pt');
-  else if(hash === '#en') show('en');
-  else show('both');
 
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+    <footer class="footer">
+      © 2026 WTFunds — Where The Funds. Contact: <a href="mailto:wtfunds.app@gmail.com">wtfunds.app@gmail.com</a>
+    </footer>
+  </main>
 </body>
 </html>
